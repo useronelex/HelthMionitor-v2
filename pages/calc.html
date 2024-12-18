@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор здоров'я</title>
+    
+    <!-- Імпорт шрифтів -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+    
+    <!-- Імпорт стилів -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/calcStyles.css">
+
+    <script type="module" defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js"></script>
+    <script type="module" defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js"></script>
+    <script type="module" defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js"></script>
+
+    <script type="module" defer src="../scripts/modalWindowScript.js"></script>
+    <script type="module" defer src="../scripts/dbScript.js"></script>
+    <script type="module" defer src="../scripts/calcScript.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="../index.html" class="logo">HealthMonitor</a>
+            <div class="burger" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="calc.html">Калькулятор здоров'я</a></li>
+                <li><a href="../pages/blog.html">Health блог</a></li>
+                <li><a href="https://zolotonosha-6.school.org.ua/" target="_blank">Про нас</a></li>
+                <div class="btn_box">
+                    <a href="#" class="login-btn btn" id="pushLoginBtn">Login</a>
+                    <a href="#" class="register-btn" id="pushRegisterBtn">Register</a>
+                </div>
+            </ul>
+        </div>
+
+        <!-- Модальне вікно реєстрації -->
+        <div id="registerModal" class="modal">
+            <span class="close" id="closeRegister">&times;</span>
+            <div class="modal-content">
+                <input type="email" id="registerEmail" class="input-login" placeholder="Username" required />
+                <input type="password" id="registerPassword" class="input-password" placeholder="Password" required />
+                <button class="register-btn" id="registerBtn">Register</button>
+            </div>
+        </div>
+        
+        <!-- Модальне вікно входу -->
+        <div id="loginModal" class="modal">
+            <span class="close" id="closeLogin">&times;</span>
+            <div class="modal-content">
+                <input type="email" id="loginEmail" class="input-login" placeholder="Username" required />
+                <input type="password" id="loginPassword" class="input-password" placeholder="Password" required />
+                <button class="login-btn" id="loginBtn">Login</button>
+            </div>
+        </div>
+    </header>
+
+<main class="main">
+    <div class="box">
+        <div class="hero-image">
+            <img class="hero-img" src="/src/images/healthcare-image.png" alt="Healthcare illustration" />
+        </div>
+
+        <div class="container">
+            <h1 class="heddin_text">Перевірка показників крові</h1>
+            <div>
+                <label for="age">Вік:</label>
+                <input type="number" id="age" placeholder="Вкажіть вік" required> 
+            </div>
+            <div>
+                <label for="gender">Стать:</label>
+                <select id="gender" required>
+                    <option value="" disabled selected>Оберіть стать</option>
+                    <option value="male">Чоловік</option>
+                    <option value="female">Жінка</option>
+                    <option value="teenMale">Хлопець (12-18 років)</option>
+                    <option value="teenFemale">Дівчина (12-18 років)</option>
+                    <option value="child">Дитина (до 12 років)</option>
+                </select>
+            </div>
+            
+            <div class="input-field">
+                <label for="leukocytes">Лейкоцити (тис/мкл):</label>
+                <input type="number" id="leukocytes" required>
+            </div>
+            
+            <div class="input-field">
+                <label for="hematocrit">Гематокрит (%):</label>
+                <input type="number" id="hematocrit" required>
+            </div>
+            
+            <div class="input-field">
+                <label for="erythrocytes">Еритроцити (10^12/л):</label>
+                <input type="number" id="erythrocytes" required>
+            </div>
+            
+            <button class="login-btn" onclick="checkValues()">Перевірити</button>
+            
+        </div>
+    </div>
+    
+    <div id="advice" class="advice"></div>
+</main>
+
+<footer class="footer">
+    <div class="footer-box">
+        <div class="">
+            <a href="#" class="logo1">HealthMonitor</a>
+            <p class="footer-p1">
+                Мала академія наук України у сфері медицини спрямована на розвиток
+                науково-дослідницьких здібностей учнів шляхом проведення практичних
+                занять.
+            </p>
+        </div>
+        <div class="about-us">
+            <a class="about">Про нас</a>
+            <p class="footer-p">ЗОШ №6</p>
+            <p class="footer-p">Ситник Олексій</p>
+            <p class="footer-p">Ситник Галина</p>
+            <p class="footer-p">Чучко Ігор</p>
+        </div>
+        <div class="region">
+            <a class="where">Звідки ми?</a>
+            <p class="footer-p3">місто Золотоноша, Черкаська область</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2582.7427427228004!2d32.03876807617538!3d49.6591463440234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d6af5b40d26d85%3A0x696e22e44395db92!2z0JfQntCoINCGLdCG0IbQhiDRgdGC0YPQv9C10L3RltCyIOKEljY!5e0!3m2!1suk!2sua!4v1731340442738!5m2!1suk!2sua"
+                width="320" height="180" style="border:5;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact">
+            <p class="contacts">Контакти</p>
+            <a class="footer-p" href="tel:+380631497246">
+                <i class="fa fa-phone-square" aria-hidden="true"> Телефон</i>
+            </a><br><br>
+
+            <a class="footer-p" href="mailto:zadovbalo4@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"> Пошта</i>
+            </a><br><br>
+
+            <a class="footer-p" href="https://t.me/adweyn" target="_blank">
+                <i class="fa fa-paper-plane" aria-hidden="true"> Telegram</i>
+            </a>
+        </div>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.toggle("active");
+    }
+</script>
+</body>
+
+</html>

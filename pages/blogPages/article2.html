@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Перша допомога при опіках</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/blogPages css/article1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/calcStyles.css" />
+    <script type="module" defer src="/scripts/calcScript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="/index.html" class="logo">HealthMonitor</a>
+        <div class="burger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="/index.html">Головна</a></li>
+          <li><a href="/pages/calc.html">Калькулятор здоров'я</a></li>
+          <li><a href="/pages/blog.html">Health блог</a></li>
+          <li>
+            <a href="https://zolotonosha-6.school.org.ua/" target="_blank"
+              >Про нас</a
+            >
+          </li>
+          <div class="btn_box">
+            <a href="#" class="login-btn btn" id="pushLoginBtn">Login</a>
+            <a href="#" class="register-btn" id="pushRegisterBtn">Register</a>
+          </div>
+        </ul>
+      </div>
+
+      <!-- Модальне вікно реєстрації -->
+      <div id="registerModal" class="modal">
+        <span class="close" id="closeRegister">&times;</span>
+        <div class="modal-content">
+          <input
+            type="email"
+            id="registerEmail"
+            class="input-login"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="registerPassword"
+            class="input-password"
+            placeholder="Password"
+            required
+          />
+          <button class="register-btn" id="registerBtn">Register</button>
+        </div>
+      </div>
+
+      <!-- Модальне вікно входу -->
+      <div id="loginModal" class="modal">
+        <span class="close" id="closeLogin">&times;</span>
+        <div class="modal-content">
+          <input
+            type="email"
+            id="loginEmail"
+            class="input-login"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            class="input-password"
+            placeholder="Password"
+            required
+          />
+          <button class="login-btn" id="loginBtn">Login</button>
+        </div>
+      </div>
+    </header>
+    <section class="hero-section">
+      <div class="heroes-image">
+        <div class="hero-text">
+          <h1 class="hero-h1">
+            Гемоглобін під контролем: Поради для підтримки оптимальних
+            показників
+          </h1>
+          <p class="hero-p">
+            Гемоглобін – це один із найважливіших білків нашого організму, який
+            знаходиться в еритроцитах (червоних кров’яних клітинах). Він
+            відповідає за транспортування кисню від легенів до тканин і
+            виведення вуглекислого газу назад до легенів. Його оптимальний
+            рівень є критично важливим для здоров’я та самопочуття.
+          </p>
+        </div>
+        <img
+          class="heros-image"
+          src="/src/images/гемоглобін2.jpg"
+          alt="Healthcare illustration"
+        />
+      </div>
+    </section>
+    <div class="article">
+      <div class="article-list">
+        <ul class="list">
+          <div class="article-box">
+            <div class="article-cont">
+              <h2>Роль гемоглобіну в організмі</h2>
+
+              <ul>
+                <li>
+                  <strong>Транспортування кисню:</strong> Гемоглобін зв’язується
+                  з молекулами кисню в легенях і доставляє його до кожної
+                  клітини організму.
+                </li>
+                <li>
+                  <strong>Виведення вуглекислого газу:</strong> Він також
+                  захоплює вуглекислий газ із тканин і транспортує його до
+                  легенів для видихання.
+                </li>
+                <li>
+                  <strong>Підтримка балансу:</strong> Гемоглобін відіграє
+                  важливу роль у регулюванні кислотно-лужного балансу крові.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="article2-box">
+            <div class="article2-cont">
+              <h2>Причини змін рівня гемоглобіну</h2>
+              <h3>Низький рівень гемоглобіну може бути викликаний:</h3>
+              <ul>
+                <li>Дефіцит заліза, фолієвої кислоти або вітаміну B12;</li>
+                <li>Крововтрата (менструації, травми, операції);</li>
+                <li>
+                  Хронічні захворювання (ниркова недостатність, онкологія);
+                </li>
+                <li>
+                  Руйнування еритроцитів через інфекції чи аутоімунні процеси.
+                </li>
+              </ul>
+
+              <h3>Підвищений рівень гемоглобіну</h3>
+              <ul>
+                <li>Перебування у горах, де менше кисню;</li>
+                <li>Хронічні хвороби легенів;</li>
+                <li>
+                  Поліцитемія (захворювання, що супроводжується збільшенням
+                  кількості еритроцитів).
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="article-management-box">
+            <div class="article-management-cont">
+              <h2>Як підвищити рівень гемоглобіну?</h2>
+              <ul>
+                <li>
+                  <strong>Збалансоване харчування:</strong>
+                  <ul>
+                    <li>
+                      Продукти, багаті залізом: червоне м'ясо, печінка, шпинат,
+                      буряк, яблука.
+                    </li>
+                    <li>
+                      Продукти з вітаміном C (цитрусові, перець), які
+                      допомагають засвоювати залізо.
+                    </li>
+                    <li>
+                      Продукти з фолієвою кислотою: зелень, авокадо, бобові.
+                    </li>
+                    <li>Джерела вітаміну B12: молоко, риба, яйця.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Додаткові засоби:</strong>
+                  Якщо харчування недостатньо, лікар може призначити добавки
+                  заліза, фолієвої кислоти чи вітаміну B12.
+                </li>
+                <li>
+                  <strong>Лікування основної причини:</strong>
+                  Якщо гемоглобін знижується через захворювання, важливо
+                  лікувати першопричину.
+                </li>
+              </ul>
+
+              <h2>Як знизити рівень гемоглобіну?</h2>
+              <ul>
+                <li>
+                  <strong>Вживання достатньої кількості рідини:</strong>
+                  Це допомагає уникнути згущення крові через зневоднення.
+                </li>
+                <li>
+                  <strong>Корекція харчування:</strong>
+                  <ul>
+                    <li>
+                      Обмежте споживання червоного м'яса та продуктів, багатих
+                      на залізо.
+                    </li>
+                    <li>
+                      Не приймайте залізовмісні добавки без рекомендації лікаря.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Медичні процедури:</strong>
+                  У разі захворювань, які викликають надлишок гемоглобіну, лікар
+                  може призначити кровопускання або медикаментозне лікування.
+                </li>
+              </ul>
+
+              <h2>Як підтримувати рівень гемоглобіну в нормі?</h2>
+              <ul>
+                <li>
+                  Регулярно проходьте обстеження. Звертайте увагу на симптоми:
+                  слабкість, блідість, задишку чи часті головні болі.
+                </li>
+                <li>
+                  Дотримуйтеся здорового способу життя. Збалансоване харчування,
+                  фізична активність і своєчасний сон – основа нормального рівня
+                  гемоглобіну.
+                </li>
+                <li>
+                  Не ігноруйте проблеми зі здоров'ям. Вчасне лікування
+                  захворювань знижує ризик серйозних ускладнень.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ul>
+        <img
+          class="article-img1"
+          src="/src/images/гемоглобін.jpg"
+          alt="Рівні гемоглобіну"
+        />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-box">
+        <div class="">
+          <p href="#" class="logo1">HealthMonitor</p>
+          <p class="footer-p1">
+            Мала академія наук України у сфері медицини спрямована на розвиток
+            науково-дослідницьких здібностей учнів шляхом проведення практичних
+            занять.
+          </p>
+        </div>
+        <div class="about-us">
+          <p class="about">Про нас</p>
+          <p class="footer-p">ЗОШ №6</p>
+          <p class="footer-p">Ситник Олексій</p>
+          <p class="footer-p">Ситник Галина</p>
+          <p class="footer-p">Чучко Ігор</p>
+        </div>
+        <div class="region">
+          <p class="where">Звідки ми?</p>
+          <p class="footer-p3">місто Золотоноша, Черкаська область</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2582.7427427228004!2d32.03876807617538!3d49.6591463440234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d6af5b40d26d85%3A0x696e22e44395db92!2z0JfQntCoINCGLdCG0IbQhiDRgdGC0YPQv9C10L3RltCyIOKEljY!5e0!3m2!1suk!2sua!4v1731340442738!5m2!1suk!2sua"
+            width="320"
+            height="180"
+            style="border: 5"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contact">
+          <p class="contacts">Контакти</p>
+          <a class="footer-p" href="tel:+380631497246">
+            <i class="fa fa-phone-square" aria-hidden="true"> Телефон</i> </a
+          ><br /><br />
+
+          <a class="footer-p" href="mailto:zadovbalo4@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"> Пошта</i> </a
+          ><br /><br />
+
+          <a class="footer-p" href="https://t.me/adweyn" target="_blank">
+            <i class="fa fa-paper-plane" aria-hidden="true"> Telegram</i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById("nav-menu");
+      navMenu.classList.toggle("active");
+    }
+  </script>
+  <script type="module" defer src="/scripts/modalWindowScript.js"></script>
+  <script type="module" defer src="/scripts/dbScript.js"></script>
+</html>

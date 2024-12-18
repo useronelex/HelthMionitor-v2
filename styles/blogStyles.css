@@ -1,0 +1,22 @@
+.articles-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+}
+.block-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 100px 0px 150px 0px;
+}
+@media (max-width: 1400px) {
+    .articles-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+    }
+}
+@media (max-width: 900px) {
+    .articles-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сторінка авторизації</title>
+    <link rel="stylesheet" href="../styles/reg.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div>
+          <a href="#" class="logo">HealthMonitor</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+          &#9776;
+          <!-- Символ бургер-меню -->
+        </div>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#find-doctor">Find a doctor</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <div class="btn_box">
+            <a href="#" class="login-btn btn" id="loginBtn">Login</a>
+            <a href="#" class="register-btn" id="registerBtn">Register</a>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="form-wrapper">
+          <form id="registration-form">
+            <h2>Реєстрація</h2>
+            <input
+              type="email"
+              placeholder="Введіть вашу електронну пошту"
+              required
+            />
+            <input type="password" placeholder="Введіть пароль" required />
+            <button type="submit">Зареєструватися</button>
+            <p>Маєте аккаунт? <a href="#" id="login-link">Увійти</a></p>
+          </form>
+          <form id="login-form" style="display: none">
+            <h2>Логін</h2>
+            <input
+              type="email"
+              placeholder="Введіть вашу електронну пошту"
+              required
+            />
+            <input type="password" placeholder="Введіть пароль" required />
+            <button type="submit">Увійти</button>
+            <p>
+              Немає аккаунту? <a href="#" id="register-link">Зареєструватися</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    const registerForm = document.getElementById("registration-form");
+    const loginForm = document.getElementById("login-form");
+    const loginLink = document.getElementById("login-link");
+    const registerLink = document.getElementById("register-link");
+
+
+    });
+
+    registerLink.addEventListener("click", () => {
+      registerForm.style.display = "block";
+      loginForm.style.display = "none";
+    });
+  </script>
+</html>

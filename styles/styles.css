@@ -1,0 +1,983 @@
+/* Основні стилі сторінки */@font-face {
+    font-family: FixelDisplayBold;
+    src: url(/FixelDisplay/FixelDisplay-Bold.ttf);
+
+
+
+}
+
+@font-face {
+    font-family: FixelDisplayLight;
+    src: url(/FixelDisplay/FixelDisplay-Light.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
+    color: #212121;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Секція Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #ebebeb;
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+.btn_box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.login-btn{
+    border-radius: 10px;
+    padding: 12px 30px 12px 30px;
+    border: 1px solid #2196f3;
+    color: #2196f3;
+    transition: all;
+    text-decoration: none;
+    transition: border-color 0.3s;    
+}
+.login-btn:hover{
+    color: #fff;
+    background-color: #2196f3;
+}
+.register-btn{
+    border-radius: 10px;
+    padding: 12px 30px 12px 30px;
+    background: #2196f3;
+    border: none;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.register-btn:hover{
+    background-color: #1f9affb6;
+}
+.logo{
+    font-size: 30px;
+}
+.navbar .logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2196f3;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li {
+    font-size: 22px;
+    columns: #1F1534;
+    font-weight: 100;
+    font-family: "Mulish", sans-serif;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #1F1534;
+}
+/* Стилі модального вікна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: white;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal .close {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: 34px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+}
+
+.input-login, .input-password{
+    margin-bottom: 1rem;
+    width: 45%;
+    height: 2.5rem;
+}
+
+/* Секція Hero */
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 80px;
+}
+.hero-h11{
+    font-size: 50px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    text-align: right;
+}
+.hero-p1{
+    font-size: 20px;
+    font-weight: 400;
+    color: #757575;
+    font-family: "Mulish", sans-serif;
+    text-align: right;
+}
+.btn-primary4{
+    background-color: #458FF6;
+    color: #ffffff;
+    border: none;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: right;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+    max-width: 94px;
+    position: relative;
+    left: 344px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #757575;
+    font-family: "Mulish", sans-serif;
+}
+
+.hero-img {
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 130%;
+}
+
+/* Основна кнопка */
+.btn-primary {
+    background-color: #458FF6;
+    color: #ffffff;
+    border: none;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+}
+.btn-primary1 {
+    color: #458FF6;
+    border: 1px solid #458FF6;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+    margin-top: 100px;
+}
+.btn-primary1:hover {
+    background-color: #1f9aff;
+    color: white;
+}
+.btn-primary:hover{
+    background-color: #1f9affb6;
+}
+/* Секція послуг */
+.services-section {
+    padding: 60px 80px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    background: url(src/images/bg\ element.png)no-repeat;
+}
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.service-img {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    text-align: center;
+}
+.service-card h3{
+    font-family: poppins;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+.service-card p{
+    font-family: mulish;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 25px;
+}
+.service-card{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius:25px;
+    height: 264px;
+    width: 280px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+}
+.hr{
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    border-radius: 70px;
+    margin-bottom: 15px;
+    
+}
+.services-h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    font-family: poppins;
+}
+
+.services-intro {
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: mulish ;
+}
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3,320px);
+    gap: 30px;
+    
+}
+
+
+
+.btn-primary3 {
+    color: #458FF6;
+    border: 1px solid #458FF6;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+}
+
+
+.articles{
+    justify-content: center;
+    
+}
+.articles-h1{
+    font-family: "FixelDisplayBold";
+    font-size: 36px;
+}
+.articles-card-text-p{
+    font-size: 15px !important;
+    font-family: "FixelDisplaylight";
+}
+.articles-cards{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.articles-img img{
+    min-width: 390px;
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    align-items: flex-start;
+}
+.articles-heading{
+    display: flex;
+    justify-content: center;
+}
+.articles-img {
+    display: flex;
+    justify-content: center;
+}
+.articles-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articles-card-text-h1{
+    font-family: poppins;
+    font-size: 21px;
+    margin-left: 15px;
+    width: 274px;
+}
+.articles-card-text-p{
+    font-size: 16px;
+    font-weight: 100;
+    width: 266px;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+.articles-card-a{
+    font-size: 17px;
+    font-family: mulish;
+    color: #1f9aff;
+    display:flex;
+    gap: 10px;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.articles-card-link svg{
+    fill: #1f9aff;
+    width: 20px;
+    height: 20px;
+}
+.articles-card-link{
+    display: flex;
+    height: 20px;
+    gap: 20px;
+}
+.articles-card{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 25px;
+    height: 470px;
+    width: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    
+}
+.hr{
+    margin-top: 20px;
+}
+.articles-h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.articles-card:hover{
+    transform: translateY(-10px);
+}
+
+
+
+.article-btn-box{
+    display: flex;
+    justify-content: center;
+}
+.article-btn{
+    color: #458FF6;
+    border: 1px solid #458FF6;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.article-btn:hover{
+    background-color: #1f9aff;
+    color: white;
+}
+
+
+.logo1{
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: pink;
+    font-size: 24px;
+
+}
+
+.footer{
+    background: linear-gradient(211.68deg, rgb(103, 195, 243) 8.549%, rgb(90, 152, 242) 70.494%);
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer-p1{
+    width: 391px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.footer-p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+      
+    
+}
+.footer-p3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.about{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: pink;
+    font-size: 24px;
+}
+
+.where{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: pink;
+    font-size: 24px;
+}
+
+.contacts{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: pink;
+    font-size: 24px;
+}
+.footer-box{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+.fa{
+    font-size: 30px;
+}
+.fa:hover{
+    color: orange;
+}
+
+
+
+
+
+/* Стилі для навігаційного меню */
+.nav-menu li {
+    position: relative;
+    /* Позиціювання для псевдоелемента */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Стиль активного елемента (Home) */
+.nav-menu li a.active {
+    color: #2196f3;
+    /* Чорний колір для активного елемента */
+}
+
+/* Анімація при наведенні на елементи меню */
+.nav-menu li a {
+    color: #2196f3;
+    /* Початковий колір */
+    transition: color 0.3s ease;
+    /* Анімація зміни кольору */
+}
+
+/* Анімація опускання при наведенні */
+.nav-menu li:hover a {
+    color: #2196f3;
+    /* Чорний колір при наведенні */
+}
+
+.nav-menu li::after {
+    content: '';
+    /* Псевдоелемент для анімації */
+    position: absolute;
+    /* Абсолютне позиціонування */
+    bottom: 0;
+    /* Вирівнювання знизу */
+    left: 0;
+    /* Вирівнювання зліва */
+    right: 0;
+    /* Вирівнювання справа */
+    top: 25px;
+    height: 3px;
+    /* Висота лінії */
+    background-color: #2196f3;
+    /* Колір лінії */
+    transform: scaleX(0);
+    /* Початковий стан (не видимий) */
+    transition: transform 0.3s ease;
+    /* Анімація появи */
+}
+
+/* Анімація лінії при наведенні */
+.nav-menu li:hover::after {
+    transform: scaleX(1);
+    /* Лінія з'являється при наведенні */
+}
+
+
+
+
+
+/* Бургер-меню */
+.burger {
+    display: none;
+    /* Сховати бургер-меню за замовчуванням */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Сховати навігаційне меню за замовчуванням на малих екранах */
+.nav-menu {
+    display: flex;
+    /* Показати меню на великих екранах */
+    list-style: none;
+    padding: 0;
+    /* Прибрати відступи */
+    margin: 0;
+    /* Прибрати маргін */
+}
+
+/* Показати навігаційне меню при відкритті */
+.nav-menu.active {
+    display: flex;
+}
+@media(max-width:1500px){
+    .hero-img{
+        max-width: 400px;
+    }
+}
+@media (max-width: 1400px) {
+    .articles-cards{
+        flex-direction: column;
+    }
+    .footer-box{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+    }
+    .footer{
+        height: 600px;
+    }
+    .footer-p{
+        width: 200px;
+    }
+    .contact{
+        width: 200px;
+    }
+    .about-us{
+        width: 150px;
+    }
+}
+@media (max-width: 1200px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero-img {
+        max-width: 300px;
+    }
+
+    .hero-h1 {
+        font-size: 30px;
+    }
+
+    .hero-p {
+        font-size: 18px;
+        width: 400px;
+    }
+    .services-grid{
+        grid-template-columns: repeat(2, 320px);
+    }
+    .services-intro{
+        width: 600px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    iframe {
+        height: 40%;
+    }
+}
+
+
+@media(max-width: 1000px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .login-btn {
+        padding: 8px 25px 8px 25px;
+    }
+
+    .register-btn {
+        padding: 8px 20px 8px 20px;
+    }
+}
+
+/* Відображення бургер-меню на малих пристроях */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        /* Сховати основне меню */
+    }
+    .footer-box {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+    }
+    .articles-card{
+        width: 300px;
+    }
+    .articles-img {
+        display: block;
+        max-width: 100px;
+
+    }
+    .footer{
+        height: 1100px;
+    }
+    .burger {
+        display: block;
+        /* Показати бургер-меню */
+    }
+
+    /* Показати навігаційне меню в бургер-меню */
+    .nav-menu {
+        flex-direction: column;
+        /* Вертикальне розташування */
+        position: absolute;
+        /* Абсолютне позиціонування */
+        background-color: white;
+        /* Фон меню */
+        top: 70px;
+        /* Відступ, щоб меню не перекривало navbar */
+        left: 0;
+        /* Вирівняти ліворуч */
+        right: 0;
+        /* Вирівняти праворуч */
+        z-index: 10;
+    }
+
+    /* Сховати зображення на малих пристроях */
+    .hero-image img,
+    .info-image img {
+        display: none;
+        /* Сховати зображення */
+    }
+
+    iframe {
+        display: none;
+    }
+}
+
+/* Для відображення меню на малих пристроях, коли воно активне */
+@media (max-width: 768px) {
+    .nav-menu.active {
+        display: flex;
+        /* Показати меню */
+    }
+}
+
+
+/* Адаптивні стилі для мобільних пристроїв */
+
+/* Hero Section - адаптивність */
+@media (max-width: 768px) {
+    
+    .hero-h1{
+        font-size: 20px;
+        text-align: left;
+        width: 340px;
+        color: #212121;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    .hero-p {
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
+        color: #757575;
+        font-family: "Mulish", sans-serif;
+        width: 300px;
+    }
+    .btn-primary{
+        padding: 10px 22px 10px 22px;
+        font-size: 14px;
+    }
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+
+    .services-h2{
+        font-size: 22px;
+    }
+    .hr{
+        width: 40px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(1, 320px);
+        width: 240px;;
+        
+    }
+
+    .services-intro {
+        width: 300px;
+        font-size: 13px;
+    }
+    .service-card{
+        width: 200px;
+        height: 200px;
+    }
+    .service-card h3{
+        font-size: 18px;
+    }
+    .service-card p{
+        font-size: 13px;
+    }
+    .service-card img{
+        width: 50px;
+        height: 50px;
+    }
+   
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+   
+}
+.logo{
+    text-decoration: none;
+}
+
+
+/* Info Section - адаптивність */
+@media (max-width: 600px) {
+    .info-block {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Стили для модального вікна */
+.modal {
+    display: none;
+    /* Спочатку сховане */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    margin: 0;
+    padding: 0 .6rem;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    border-color: #000;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .articles-cards {
+        flex-direction: column;
+        /* Змінюємо вирівнювання карток на вертикальне */
+        align-items: center;
+        /* Центруємо картки */
+        gap: 30px;
+        /* Відстань між картками */
+    }
+
+    .articles-card {
+        width: 290px;
+        /* Ширина картки займатиме 100% */
+        max-width: 300px;
+        /* Максимальна ширина для карток на мобільних */
+    }
+
+    .articles-img img {
+        width: 100%;
+        /* Ширина зображень під мобільні екрани */
+        height: auto;
+        /* Зберігаємо пропорції зображення */
+    }
+
+    .articles-card-text-h1 {
+        font-size: 18px;
+        /* Менший розмір заголовку для мобільних */
+    }
+
+    .articles-card-text-p {
+        font-size: 14px;
+        /* Зменшений розмір тексту опису */
+    }
+
+    .article-btn {
+        margin-top: 40px;
+        /* Зменшити відстань до кнопки */
+    }
+        .articles-img img {
+            width: 100%;
+            /* Зображення займає всю ширину контейнера */
+            height: 200px;
+            /* Зберігаємо пропорції зображення */
+            object-fit: cover;
+            /* Забезпечує гарне обрізання зображення без викривлень */
+            border-radius: 10px 10px 0 0;
+            /* Заокруглюємо верхні кути */
+            position: relative;
+            right: 40px;
+        }
+    
+        .articles-card {
+            max-width: 300px;
+            /* Встановлюємо максимальну ширину картки */
+            margin: 0 auto;
+            height: 400px;
+            /* Центруємо картку на сторінці */
+            border-radius: 10px;
+            /* Заокруглюємо кути картки */
+            overflow: hidden;
+            /* Обрізаємо вміст за межами картки */
+        }
+    
+        .articles-card-text-h1 {
+            font-size: 20px;
+            /* Оптимальний розмір заголовка */
+        }
+    
+        .articles-card-text-p {
+            font-size: 16px;
+            /* Оптимальний розмір тексту опису */
+        }
+                
+        
+        .footer-p1{
+            width: 310px;
+        }
+        .articles-h1{
+            font-size: 25px;
+        }
+}

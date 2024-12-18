@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Overview</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/dashboardStyle.css" />
+  </head>
+
+  <body>
+    <aside>
+      <div>
+        <div class="logo">
+          <a href="#"><img src="../src/DashboardImages/Group.png" alt="" /></a>
+        </div>
+        <ul>
+          <li>
+            <a href="#"><img src="../src/DashboardImages/Frame (7).png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../src/DashboardImages/Frame (8).png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../src/DashboardImages/Frame (9).png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../src/DashboardImages/Frame (10).png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../src/DashboardImages/Frame (11).png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../src/DashboardImages/Frame (12).png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <div class="main-inf">
+        <h1>Health Overview</h1>
+        <p>August 12, 2021</p>
+      </div>
+      <div class="cards">
+        <div class="main-card">
+          <div class="img">
+            <img src="../src/DashboardImages/Group 31.png" alt="" />
+
+            <h1>Blood Sugar</h1>
+          </div>
+          <h1><span>80</span>mg / dL</h1>
+          <p>normal</p>
+          <img src="../src/DashboardImages/Group 11 (2).png" alt="" />
+        </div>
+        <div class="main-card">
+          <div class="img">
+            <img src="../src/DashboardImages/Group 33.png" alt="" />
+
+            <h1>Heart Rate</h1>
+          </div>
+          <h1><span>98</span>bpm</h1>
+          <p>normal</p>
+          <img src="../src/DashboardImages/Group 29.png" alt="" />
+        </div>
+        <div class="main-card">
+          <div class="img">
+            <img src="../src/DashboardImages/Group 35.png" alt="" />
+
+            <h1>Blood Pressure</h1>
+          </div>
+          <h1><span>102</span>/ 72 mmhg</h1>
+          <p>normal</p>
+          <img src="../src/DashboardImages/Group 30.png" alt="" />
+        </div>
+      </div>
+      <div class="chart-container">
+        <h2>Activity Growth</h2>
+        <canvas id="activityChart"></canvas>
+      </div>
+    </main>
+    <footer>
+      <h1>BMI Calculator</h1>
+      <div class="container">
+        <div class="input-group">
+          <div class="input-field">
+            <label for="height">Height</label>
+            <input type="text" id="height" value="170 cm" />
+          </div>
+          <div class="input-field input-field-border">
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" value="72 kg" />
+          </div>
+        </div>
+      </div>
+      <div class="bmi-container">
+        <div class="bmi-header">
+          <span class="bmi-title">Body Mass Index (BMI)</span>
+        </div>
+
+        <div class="bmi-content">
+          <div class="bmi-value">24.9</div>
+          <span class="bmi-status">You're Healthy</span>
+        </div>
+
+        <div class="bmi-scale">
+          <div class="bmi-gradient"></div>
+          <div class="bmi-marker" style="left: 35%"></div>
+          <div class="bmi-labels">
+            <span>15</span>
+            <span>18.5</span>
+            <span>25</span>
+            <span>30</span>
+            <span>40</span>
+          </div>
+        </div>
+      </div>
+      <div class="body-measurements">
+        <div>
+          <h2>Body Measurements</h2>
+          <p class="last-checked">Last checked 2 Days Ago</p>
+        </div>
+
+        <div class="measurements-container">
+          <div class="measurements-left">
+            <div class="body-shape">
+              <span>Inverted Triangle Body Shape</span>
+            </div>
+
+            <div class="measurement-cards">
+              <div class="measurement-card">
+                <label>Chest (in)</label>
+                <div class="value">44.5 <span class="trend-up">↑</span></div>
+              </div>
+
+              <div class="measurement-card">
+                <label>Waist (in)</label>
+                <div class="value">34 <span class="trend-down">↓</span></div>
+              </div>
+
+              <div class="measurement-card">
+                <label>Hip (in)</label>
+                <div class="value">42.5 <span class="trend-down">↓</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="measurements-right">
+            <div class="body-figure">
+              <!-- Body figure visualization -->
+              <img
+                src="../src/DashboardImages/Group 36.png"
+                alt="Body measurements figure"
+                class="figure-outline"
+              />
+              <div class="measurement-lines">
+                <!-- Red measurement lines will be added via CSS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

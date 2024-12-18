@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Перша допомога при опіках</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/blogPages css/article1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/calcStyles.css" />
+    <script type="module" defer src="/scripts/calcScript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="/index.html" class="logo">HealthMonitor</a>
+        <div class="burger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="/index.html">Головна</a></li>
+          <li><a href="/pages/calc.html">Калькулятор здоров'я</a></li>
+          <li><a href="/pages/blog.html">Health блог</a></li>
+          <li>
+            <a href="https://zolotonosha-6.school.org.ua/" target="_blank"
+              >Про нас</a
+            >
+          </li>
+          <div class="btn_box">
+            <a href="#" class="login-btn btn" id="pushLoginBtn">Login</a>
+            <a href="#" class="register-btn" id="pushRegisterBtn">Register</a>
+          </div>
+        </ul>
+      </div>
+
+      <!-- Модальне вікно реєстрації -->
+      <div id="registerModal" class="modal">
+        <span class="close" id="closeRegister">&times;</span>
+        <div class="modal-content">
+          <input
+            type="email"
+            id="registerEmail"
+            class="input-login"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="registerPassword"
+            class="input-password"
+            placeholder="Password"
+            required
+          />
+          <button class="register-btn" id="registerBtn">Register</button>
+        </div>
+      </div>
+
+      <!-- Модальне вікно входу -->
+      <div id="loginModal" class="modal">
+        <span class="close" id="closeLogin">&times;</span>
+        <div class="modal-content">
+          <input
+            type="email"
+            id="loginEmail"
+            class="input-login"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            class="input-password"
+            placeholder="Password"
+            required
+          />
+          <button class="login-btn" id="loginBtn">Login</button>
+        </div>
+      </div>
+    </header>
+    <section class="hero-section">
+      <div class="heroes-image">
+        <div class="hero-text">
+          <h1 class="hero-h1">
+            Самопочуття під контролем: Як зовнішні і внутрішні фактори формують
+            ваше здоров'я
+          </h1>
+          <p class="hero-p">
+            Самопочуття людини може бути складним і багатогранним феноменом, що
+            залежить від безлічі факторів. Розуміння цих факторів допоможе вам
+            краще контролювати власне здоров'я та підвищити якість життя.
+          </p>
+        </div>
+        <img
+          class="heros-image"
+          src="/src/images/біль-голови.jpg"
+          alt="Healthcare illustration"
+        />
+      </div>
+    </section>
+    <div class="article">
+      <div class="article-list">
+        <ul class="list">
+          <div class="article-box">
+            <div class="article-cont">
+              <h3>1. Фізичне здоров'я</h3>
+              <ul>
+                <li>
+                  <strong>Хронічні захворювання</strong>
+                  <p>
+                    Такі стани, як діабет, гіпертонія, серцево-судинні
+                    захворювання або захворювання дихальної системи, можуть
+                    впливати на загальне самопочуття.
+                  </p>
+                </li>
+                <li>
+                  <strong>Інфекції та застуди</strong>
+                  <p>
+                    Грип, простуда, інші вірусні або бактеріальні інфекції
+                    можуть супроводжуватися такими симптомами, як втома,
+                    головний біль, підвищена температура та біль у тілі.
+                  </p>
+                </li>
+                <li>
+                  <strong>Недостатній сон</strong>
+                  <p>
+                    Хронічна втома і проблеми зі сном, такі як безсоння або
+                    апное сну, можуть серйозно впливати на енергійність і
+                    настрій.
+                  </p>
+                </li>
+                <li>
+                  <strong>Порушення харчування</strong>
+                  <p>
+                    Недоїдання або неправильне харчування, зокрема дефіцит
+                    важливих вітамінів і мінералів (наприклад, заліза або
+                    вітаміну D), можуть призвести до поганого самопочуття,
+                    слабкості, анемії тощо.
+                  </p>
+                </li>
+              </ul>
+
+              <h3>2. Емоційний і психологічний стан</h3>
+              <ul>
+                <li>
+                  <strong>Стрес і тривога</strong>
+                  <p>
+                    Постійний стрес, тривога або депресія можуть призвести до
+                    фізичних симптомів, таких як головний біль, болі в шиї,
+                    спині, проблеми з шлунково-кишковим трактом, безсоння та
+                    низька енергія.
+                  </p>
+                </li>
+                <li>
+                  <strong>Перегрузка роботою або навчанням</strong>
+                  <p>
+                    Постійне перевантаження на роботі чи навчанні може
+                    спричинити стрес, втому, проблеми з концентрацією та навіть
+                    фізичні хвороби.
+                  </p>
+                </li>
+                <li>
+                  <strong>Низька самооцінка і соціальна ізоляція</strong>
+                  <p>
+                    Відчуття самотності, низька самооцінка, відсутність
+                    підтримки можуть викликати почуття безнадії, пригніченості,
+                    емоційного виснаження.
+                  </p>
+                </li>
+              </ul>
+
+              <!-- Rest of the sections continue in the same style -->
+              <h3>3. Оточення</h3>
+              <ul>
+                <li>
+                  <strong>Шум і забруднення навколишнього середовища</strong>
+                  <p>
+                    Постійний шум, забруднене повітря або погані умови
+                    навколишнього середовища можуть погіршити здоров'я,
+                    викликати головний біль або депресивні стани.
+                  </p>
+                </li>
+                <li>
+                  <strong>Відносини з іншими людьми</strong>
+                  <p>
+                    Конфлікти, негативні взаємодії з іншими людьми або
+                    відсутність підтримки від родини чи друзів можуть впливати
+                    на ваше емоційне самопочуття.
+                  </p>
+                </li>
+              </ul>
+
+              <!-- Additional sections would be added similarly -->
+              <h3>Висновок</h3>
+              <p>
+                Усі ці фактори взаємопов'язані і можуть впливати на ваше
+                самопочуття. Важливо звертати увагу на різні аспекти свого
+                життя, підтримувати баланс і піклуватися про своє фізичне та
+                психічне здоров'я.
+              </p>
+            </div>
+          </div>
+        </ul>
+        <img
+          class="article-img1"
+          src="/src/images/Самопочуття1.jpeg"
+          alt="Рівні гемоглобіну"
+        />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-box">
+        <div class="">
+          <p href="#" class="logo1">HealthMonitor</p>
+          <p class="footer-p1">
+            Мала академія наук України у сфері медицини спрямована на розвиток
+            науково-дослідницьких здібностей учнів шляхом проведення практичних
+            занять.
+          </p>
+        </div>
+        <div class="about-us">
+          <p class="about">Про нас</p>
+          <p class="footer-p">ЗОШ №6</p>
+          <p class="footer-p">Ситник Олексій</p>
+          <p class="footer-p">Ситник Галина</p>
+          <p class="footer-p">Чучко Ігор</p>
+        </div>
+        <div class="region">
+          <p class="where">Звідки ми?</p>
+          <p class="footer-p3">місто Золотоноша, Черкаська область</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2582.7427427228004!2d32.03876807617538!3d49.6591463440234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d6af5b40d26d85%3A0x696e22e44395db92!2z0JfQntCoINCGLdCG0IbQhiDRgdGC0YPQv9C10L3RltCyIOKEljY!5e0!3m2!1suk!2sua!4v1731340442738!5m2!1suk!2sua"
+            width="320"
+            height="180"
+            style="border: 5"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contact">
+          <p class="contacts">Контакти</p>
+          <a class="footer-p" href="tel:+380631497246">
+            <i class="fa fa-phone-square" aria-hidden="true"> Телефон</i> </a
+          ><br /><br />
+
+          <a class="footer-p" href="mailto:zadovbalo4@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"> Пошта</i> </a
+          ><br /><br />
+
+          <a class="footer-p" href="https://t.me/adweyn" target="_blank">
+            <i class="fa fa-paper-plane" aria-hidden="true"> Telegram</i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById("nav-menu");
+      navMenu.classList.toggle("active");
+    }
+  </script>
+  <script type="module" defer src="/scripts/modalWindowScript.js"></script>
+  <script type="module" defer src="/scripts/dbScript.js"></script>
+</html>

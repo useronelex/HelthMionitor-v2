@@ -1,0 +1,650 @@
+/* Основні стилі сторінки */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
+    color: #212121;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Секція Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #ebebeb;
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.btn_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-btn {
+    border-radius: 10px;
+    padding: 12px 30px 12px 30px;
+    background: #ffffff;
+    border: 1px white solid;
+    color: black;
+    transition: all;
+    text-decoration: none;
+    transition: border-color 0.3s;
+}
+
+.login-btn:hover {
+    border-color: #2196f3;
+}
+
+.register-btn {
+    border-radius: 10px;
+    padding: 12px 30px 12px 30px;
+    background: #2196f3;
+    border: none;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #1f9affb6;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.navbar .logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2196f3;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li {
+    font-size: 22px;
+    columns: #1F1534;
+    font-weight: 100;
+    font-family: "Mulish", sans-serif;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #1F1534;
+}
+
+/* Секція Hero */
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.hero-h11 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    text-align: right;
+}
+
+.hero-p1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #757575;
+    font-family: "Mulish", sans-serif;
+    text-align: right;
+}
+
+.btn-primary4 {
+    background-color: #458FF6;
+    color: #ffffff;
+    border: none;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: right;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+    max-width: 94px;
+    position: relative;
+    left: 344px;
+}
+
+.hero-text1 {}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #212121;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #757575;
+    font-family: "Mulish", sans-serif;
+}
+
+.hero-img {
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 130%;
+}
+
+/* Основна кнопка */
+.btn-primary {
+    background-color: #458FF6;
+    color: #ffffff;
+    border: none;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+}
+
+.btn-primary1 {
+    color: #458FF6;
+    border: 1px solid #458FF6;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+    margin-top: 100px;
+}
+
+.btn-primary1:hover {
+    background-color: #1f9aff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1f9affb6;
+}
+
+/* Секція послуг */
+.services-section {
+    padding: 60px 80px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    background: url(src/images/bg\ element.png)no-repeat;
+}
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.service-img {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-family: poppins;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.service-card p {
+    font-family: mulish;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 25px;
+    height: 264px;
+    width: 280px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.hr {
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    border-radius: 70px;
+    margin-bottom: 15px;
+
+}
+
+.services-h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212121;
+    font-family: poppins;
+}
+
+.services-intro {
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: mulish;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    gap: 30px;
+
+}
+
+
+
+.btn-primary3 {
+    color: #458FF6;
+    border: 1px solid #458FF6;
+    padding: 15px 34px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+}
+
+
+
+/* Сховати зображення на малих пристроях */
+@media (max-width: 768px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для навігаційного меню */
+.nav-menu li {
+    position: relative;
+    /* Позиціювання для псевдоелемента */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Стиль активного елемента (Home) */
+.nav-menu li a.active {
+    color: #2196f3;
+    /* Чорний колір для активного елемента */
+}
+
+/* Анімація при наведенні на елементи меню */
+.nav-menu li a {
+    color: #2196f3;
+    /* Початковий колір */
+    transition: color 0.3s ease;
+    /* Анімація зміни кольору */
+}
+
+/* Анімація опускання при наведенні */
+.nav-menu li:hover a {
+    color: #2196f3;
+    /* Чорний колір при наведенні */
+}
+
+.nav-menu li::after {
+    content: '';
+    /* Псевдоелемент для анімації */
+    position: absolute;
+    /* Абсолютне позиціонування */
+    bottom: 0;
+    /* Вирівнювання знизу */
+    left: 0;
+    /* Вирівнювання зліва */
+    right: 0;
+    /* Вирівнювання справа */
+    top: 25px;
+    height: 3px;
+    /* Висота лінії */
+    background-color: #2196f3;
+    /* Колір лінії */
+    transform: scaleX(0);
+    /* Початковий стан (не видимий) */
+    transition: transform 0.3s ease;
+    /* Анімація появи */
+}
+
+/* Анімація лінії при наведенні */
+.nav-menu li:hover::after {
+    transform: scaleX(1);
+    /* Лінія з'являється при наведенні */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Бургер-меню */
+.burger {
+    display: none;
+    /* Сховати бургер-меню за замовчуванням */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Сховати навігаційне меню за замовчуванням на малих екранах */
+.nav-menu {
+    display: flex;
+    /* Показати меню на великих екранах */
+    list-style: none;
+    padding: 0;
+    /* Прибрати відступи */
+    margin: 0;
+    /* Прибрати маргін */
+}
+
+/* Показати навігаційне меню при відкритті */
+.nav-menu.active {
+    display: flex;
+}
+
+@media(max-width:1500px) {
+    .hero-img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .hero-img {
+        max-width: 300px;
+    }
+
+    .hero-h1 {
+        font-size: 30px;
+    }
+
+    .hero-p {
+        font-size: 18px;
+        width: 400px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 320px);
+    }
+
+    .services-intro {
+        width: 600px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media(max-width: 1000px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .login-btn {
+        padding: 8px 25px 8px 25px;
+    }
+
+    .register-btn {
+        padding: 8px 20px 8px 20px;
+    }
+}
+
+/* Відображення бургер-меню на малих пристроях */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        /* Сховати основне меню */
+    }
+
+    .burger {
+        display: block;
+        /* Показати бургер-меню */
+    }
+
+    /* Показати навігаційне меню в бургер-меню */
+    .nav-menu {
+        flex-direction: column;
+        /* Вертикальне розташування */
+        position: absolute;
+        /* Абсолютне позиціонування */
+        background-color: white;
+        /* Фон меню */
+        top: 70px;
+        /* Відступ, щоб меню не перекривало navbar */
+        left: 0;
+        /* Вирівняти ліворуч */
+        right: 0;
+        /* Вирівняти праворуч */
+        z-index: 10;
+    }
+
+    /* Сховати зображення на малих пристроях */
+    .hero-image img,
+    .info-image img {
+        display: none;
+        /* Сховати зображення */
+    }
+}
+
+/* Для відображення меню на малих пристроях, коли воно активне */
+@media (max-width: 768px) {
+    .nav-menu.active {
+        display: flex;
+        /* Показати меню */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
